@@ -1,7 +1,18 @@
-const word = "FUnctionUp     ";
-const res = word.trim().toLowerCase();
-console.log(res)
-const res2 = res.toUpperCase();
-console.log(res2)
+function trim() {
+    let name = '  Deependra     '
+    console.log('Trimmed name is: ', name.trim())
+}
 
-module.exports.format = formatData;
+function changetoLowerCase() {
+    let name = 'SaBIhA KHaN'
+    console.log('Name in lowercase is: ', name.toLowerCase())
+}
+
+function changeToUpperCase() {
+    let name = 'sabiha khan'
+    console.log('Name in uppercase is: ', name.toUpperCase())
+}
+
+module.exports.trim = trim
+module.exports.changetoLowerCase = changetoLowerCase
+module.exports.changeToUpperCase = changeToUpperCase

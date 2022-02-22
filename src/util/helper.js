@@ -1,14 +1,24 @@
-var today = new Date()
-var date = String(today.getDate)
-var month = String(today.getMonth + 1)
-let d = () => { date; }
-
-let m = () => { month; }
-
-let getBaInfo = () => {
-    ("Thorium ,W3D1, the topic of today is nodejs!");
+//Prints the current date
+function printDate() {
+    let today = new Date()
+    let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear()
+        // Added 1 to month because months start from 0
+    console.log('Current date is: ', date)
 }
 
-module.exports.d = date;
-module.exports.m = month;
-module.exports.getbaInfo = getBaInfo;
+//Prints the current month
+function printMonth() {
+    let today = new Date()
+    let month = today.getMonth() + 1
+        // Added 1 to month because months start from 0
+    console.log('Current month is: ', month)
+}
+
+//Prints information about the batch
+function getBatchInfo() {
+    console.log('Thorium, W3D1, the topic for today is Nodejs module system')
+}
+
+module.exports.printCurrentDate = printDate
+module.exports.printCurrentMonth = printMonth
+module.exports.printBatchInfo = getBatchInfo
